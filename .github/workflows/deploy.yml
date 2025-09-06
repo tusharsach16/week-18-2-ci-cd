@@ -19,10 +19,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and Push Docker image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           context: .
-          file: .docker/Dockerfile.user
+          file: ./docker/Dockerfile.user
           push: true
           tags: tushar1610/week-18-class:latest
 
